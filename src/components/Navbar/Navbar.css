@@ -1,4 +1,37 @@
 .navbar{
-    background-color: green;
-    width: 100vw;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    display: flex;
+    padding: 0rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    margin-bottom: 0;
+}
+.feedbackButton{
+    background-color: var(--black-color);
+    color: var(--primary-color);
+    padding: 0.7rem 1rem;
+    border-radius:0.7rem;
+    font-size: medium;
+    font-weight:600;
+    border: 1px solid var(--primary-color);
+    width: 10.5rem;
+    height: 3rem;
+}
+.search{
+    width: 35rem;
+}
+
+@media  screen and (max-width :768px) {
+    .feedbackButton{
+        background-color: var(--black-color);
+    color: var(--primary-color);
+    padding: 0.3rem 0.5rem;
+    border-radius:0.7rem;
+    font-size: medium;
+    border: 1px solid var(--primary-color);
+    margin-left: 0.5rem;
+    width: 7rem;
+    }
 }

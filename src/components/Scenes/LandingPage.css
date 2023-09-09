@@ -1,0 +1,34 @@
+
+  .search-mobile {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between; /* Align input and button horizontally */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .search-desktop {
+    display: none !important;
+  }
+  @media screen and (max) {
+    
+  }
+  @media screen and (min-width: 768px) {
+    .hero {
+      justify-content: flex-end;
+      height: 20rem;
+      padding-right: 8rem;
+    }
+    .hero-heading {
+      position: static;
+      font-size: 3rem;
+      width: 50%;
+    }
+    .search-mobile {
+      display: none !important;
+    }
+    .search-desktop {
+      display: block !important;
+      width: 35rem !important;
+    }
+  }
+  
