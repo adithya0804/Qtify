@@ -1,3 +1,4 @@
-*{
-    background-color: var(--primary-color);
+.navbar{
+    background-color: green;
+    width: 100vw;
 }
