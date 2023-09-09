@@ -1,5 +1,4 @@
 .navbar{
-    box-sizing: border-box;
     background-color: var(--primary-color);
     display: flex;
     padding: 0rem 1.5rem;
@@ -19,9 +18,10 @@
     width: 10.5rem;
     height: 3rem;
 }
-.search{
-    width: 35rem;
+.logo{
+    width: 5rem;
 }
+
 
 @media  screen and (max-width :768px) {
     .feedbackButton{

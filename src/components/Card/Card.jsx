@@ -9,7 +9,7 @@ const Card = ({className, imageUrl, title, followers}) => {
         </div>
         <span className='followers'>{followers} Follows</span>
       </div>
-      <span>{title}</span>
+      <span className='title'>{title}</span>
     </div>
   )
 }

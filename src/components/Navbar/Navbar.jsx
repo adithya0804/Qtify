@@ -7,7 +7,7 @@ import SearchBar from '../SearchBar/SearchBar'
 const Navbar = ({children}) => {
   return (
   <nav className='navbar'>
-    <Logo/>
+    <Logo className='logo'/>
   {children}
     <Button text="Give Feedback" className="feedbackButton" onClick={()=>{}}/>
   </nav>

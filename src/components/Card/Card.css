@@ -31,3 +31,7 @@ width: 6rem;
 border-radius: 14px;
 margin: 0.3rem 0rem 0.3rem 0.5rem;
 }
+.title{
+    font-size: 14px;
+    font-weight: 400;
+}

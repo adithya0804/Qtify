@@ -1,8 +1,8 @@
 import React from 'react'
 import logo from "../../assets/logo.svg"
-const Logo = () => {
+const Logo = ({className}) => {
   return (
-  <img src={logo} alt="logo"/>
+  <img src={logo} alt="logo" className={className}/>
   )
 }
 
