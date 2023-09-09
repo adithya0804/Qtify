@@ -11,7 +11,7 @@ const LandingPage = () => {
         <SearchBar className='search-desktop'/>
       </Navbar>
       <SearchBar className='search-mobile'/>
-      <HeroSection/>
+      <HeroSection className='hero'/>
     </div>
   )
 }
