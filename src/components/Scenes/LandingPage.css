@@ -11,6 +11,11 @@
   .search-desktop {
     display: none !important;
   }
+  .testCard{
+    width: 10rem;
+    height: 18rem;
+    margin-left: 3rem;
+  }
   @media screen and (min-width: 768px) {
     .search-mobile {
       display: none !important;
