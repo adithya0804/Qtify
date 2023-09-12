@@ -1,15 +1,15 @@
 import React from 'react'
-import'./Card.css'
-const Card = ({className, imageUrl, title, followers}) => {
+import styles from './Card.module.css'
+const Card = ({className, cardData}) => {
   return (
-    <div className={`card ${className}`}>
-      <div className='topSection'>
-        <div className='imageSection'>
-            <img src={imageUrl} alt={title}/>
+    <div className={`${styles.card} ${className}`}>
+      <div className={styles.topSection}>
+        <div className={styles.imageSection}>
+            <img src={cardData.image} alt={cardData.title} className={styles.image}/>
         </div>
-        <span className='followers'>{followers} Follows</span>
+        <span className={styles.followers}>{cardData.follows} Follows</span>
       </div>
-      <span className='title'>{title}</span>
+      <span className={styles.title}>{cardData.title}</span>
     </div>
   )
 }

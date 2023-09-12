@@ -1,5 +1,5 @@
 
-  .search-mobile {
+  .searchMobile {
     margin-top: 0;
     display: flex;
     justify-content: space-between; /* Align input and button horizontally */
@@ -8,7 +8,7 @@
   .hero{
     margin: 1rem 0;
 }
-  .search-desktop {
+  .searchDesktop {
     display: none !important;
   }
   .testCard{
@@ -17,10 +17,10 @@
     margin-left: 3rem;
   }
   @media screen and (min-width: 768px) {
-    .search-mobile {
+    .searchMobile {
       display: none !important;
     }
-    .search-desktop {
+    .searchDesktop {
       display: block !important;
       width: 35rem !important;
     }

@@ -17,7 +17,7 @@
     outline: none;
     font-size: 1rem;
 }
-.search-button{
+.searchButton{
     border: none;
     padding-left: 1rem;
     background-color: var(--white-color);
