@@ -1,16 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 import SearchBar from '../SearchBar/SearchBar'
 import styles from './LandingPage.module.css'
 import HeroSection from '../HeroSection/HeroSection'
 import Card from '../Card/Card'
 import TestImage from '../../assets/Test.png'
+import  axios  from 'axios'
+import Grid from '../Grid/Grid'
 let cardData={
   title:'New BollyWood',
   follows:'100M',
   image:TestImage
 }
 const LandingPage = () => {
+  const [data, setData]=useState([]);
+const fetchData=async()=>{
+  try{
+const result = await axios.get('https://qtify-backend-labs.crio.do/albums/top');
+setData(result.data);
+  }catch(e){
+    console.log(e)
+  }
+}
+useEffect(()=>{
+  fetchData();
+},[])
   return (
     <div>
       <Navbar>
@@ -18,7 +32,9 @@ const LandingPage = () => {
       </Navbar>
       <SearchBar className={styles.searchMobile}/>
       <HeroSection className={styles.hero}/>
-      <Card cardData={cardData} className={styles.testCard}/>
+      <div className={styles.content}>
+      <Grid data={data}/>
+      </div>
     </div>
   )
 }
