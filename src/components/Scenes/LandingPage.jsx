@@ -3,15 +3,9 @@ import Navbar from '../Navbar/Navbar'
 import SearchBar from '../SearchBar/SearchBar'
 import styles from './LandingPage.module.css'
 import HeroSection from '../HeroSection/HeroSection'
-import Card from '../Card/Card'
-import TestImage from '../../assets/Test.png'
 import  axios  from 'axios'
 import Grid from '../Grid/Grid'
-let cardData={
-  title:'New BollyWood',
-  follows:'100M',
-  image:TestImage
-}
+
 const LandingPage = () => {
   const [data, setData]=useState([]);
 const fetchData=async()=>{
