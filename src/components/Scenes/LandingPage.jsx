@@ -5,6 +5,7 @@ import styles from './LandingPage.module.css'
 import HeroSection from '../HeroSection/HeroSection'
 import  axios  from 'axios'
 import Grid from '../Grid/Grid'
+import Carousel from '../Carousel/Carousel'
 
 const LandingPage = () => {
   const [data, setData]=useState([]);
@@ -27,7 +28,8 @@ useEffect(()=>{
       <SearchBar className={styles.searchMobile}/>
       <HeroSection className={styles.hero}/>
       <div className={styles.content}>
-      <Grid data={data}/>
+        <Grid data={data}/>
+      <Carousel data={data} />
       </div>
     </div>
   )
