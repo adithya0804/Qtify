@@ -5,6 +5,7 @@
     color: var(--white-color);
     width: 10rem;
     height: 13rem;
+    cursor: pointer;
 }
 .topSection{
     background-color: var(--white-color);

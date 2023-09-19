@@ -23,7 +23,7 @@ const Card = ({className, cardData, type}) => {
         <span className={styles.followers}>{`${(
                 Number(cardData.likes) / 1000
               ).toFixed(1)}k Likes`}</span>
-      </div> </div>}
+      </div>  <span className={styles.title}>{cardData.title}</span> </div>}
 
     </>
   )

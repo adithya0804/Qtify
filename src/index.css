@@ -53,3 +53,23 @@ h6{
 .swiper-slide {
 	width: auto !important;
 }
+.MuiTabs-indicator{
+  background: var(--primary-color)!important;
+}
+.Mui-selected {
+  color:var(--primary-color) !important;
+}
+.MuiTabs-flexContainer{
+  flex-wrap: wrap;
+}
+.MuiTab-root{
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  text-transform: capitalize !important;
+}
+@media screen and (max-width: 490px) {
+  .MuiTabs-indicator{
+    display: none;
+  }
+}

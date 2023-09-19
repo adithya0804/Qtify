@@ -4,7 +4,8 @@ import SearchBar from '../SearchBar/SearchBar'
 import styles from './LandingPage.module.css'
 import HeroSection from '../HeroSection/HeroSection'
 import Section from '../Section/Section'
-import { fetchAlbums, fetchSongs } from '../../Api/api'
+import { fetchAlbums, fetchGenreData, fetchSongs } from '../../Api/api'
+import SongSection from '../SongSection/SongSection'
 
 const LandingPage = () => {
   const [data, setData]=useState([]);
@@ -12,9 +13,12 @@ const fetchData=async()=>{
   try{
 const albums= await fetchAlbums();
 const songs =await fetchSongs();
+const genres= await fetchGenreData()
+genres.data.unshift({key:'all', label:"All"})
 const data={
   ...albums,
-  songs
+  songs,
+  "genres":genres.data
 }
 setData(data);
   }catch(e){
@@ -34,6 +38,7 @@ useEffect(()=>{
       <div className={styles.content}>
       <Section data={data.topAlbums} type={'album'} title={'Top Albums'}/>
       <Section data={data.newAlbums} type={'album'} title={'New Albums'}/>
+      <SongSection title={'Songs'} genres={data.genres} data={data.songs} type={'song'}/>
       </div>
     </div>
   )
