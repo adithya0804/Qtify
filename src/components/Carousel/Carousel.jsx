@@ -16,23 +16,23 @@ const Controls = ({ data }) => {
 		swiper?.slideTo(0);
 	}, [data, swiper]);
 
-	return <></>;
 };
 
-const Carousel = ({ data }) => {
+const Carousel = ({ data, type }) => {
 	return (
 		<div className={styles.wrapper}>
 			<Swiper
+			style={{padding:'10px 10px'}}
 				initialSlide={0}
 				modules={[Navigation]}
-				slidesPerView={'auto'}
-				spaceBetween={10}
+                slidesPerView={'auto'}
+				spaceBetween={40}
 				allowTouchMove>
 				<Controls data={data} />
 				<CarouselLeftNavigation />
 				<CarouselRightNavigation />
 				{data?.map((item) => (
-					<SwiperSlide key={item?.id}>{<Card cardData={item}/>}</SwiperSlide>
+					<SwiperSlide key={item?.id}className={styles.swiperSlide} >{<Card cardData={item} type={type}/>}</SwiperSlide>
 				))}
 			</Swiper>
 		</div>

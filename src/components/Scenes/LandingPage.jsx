@@ -3,16 +3,20 @@ import Navbar from '../Navbar/Navbar'
 import SearchBar from '../SearchBar/SearchBar'
 import styles from './LandingPage.module.css'
 import HeroSection from '../HeroSection/HeroSection'
-import  axios  from 'axios'
-import Grid from '../Grid/Grid'
-import Carousel from '../Carousel/Carousel'
+import Section from '../Section/Section'
+import { fetchAlbums, fetchSongs } from '../../Api/api'
 
 const LandingPage = () => {
   const [data, setData]=useState([]);
 const fetchData=async()=>{
   try{
-const result = await axios.get('https://qtify-backend-labs.crio.do/albums/top');
-setData(result.data);
+const albums= await fetchAlbums();
+const songs =await fetchSongs();
+const data={
+  ...albums,
+  songs
+}
+setData(data);
   }catch(e){
     console.log(e)
   }
@@ -28,8 +32,8 @@ useEffect(()=>{
       <SearchBar className={styles.searchMobile}/>
       <HeroSection className={styles.hero}/>
       <div className={styles.content}>
-        <Grid data={data}/>
-      <Carousel data={data} />
+      <Section data={data.topAlbums} type={'album'} title={'Top Albums'}/>
+      <Section data={data.newAlbums} type={'album'} title={'New Albums'}/>
       </div>
     </div>
   )
