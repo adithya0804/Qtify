@@ -1,7 +1,7 @@
 .searchContainer{
     height: 3rem;
     background-color: var(--white-color);
-    border: 1px solid var(--black-color);
+    border: 2px solid var(--black-color);
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
