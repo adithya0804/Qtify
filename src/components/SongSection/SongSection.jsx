@@ -27,7 +27,7 @@ return data.filter(item=> item.genre.key===genre)
     {
     genres?.map((item)=>{
        return (<TabPanel className={styles.panel} key={item.key} value={item.key}>
-<Carousel data={filterSongs(item.key)} type={'song'}/>
+<Carousel data={filterSongs(item.key)} type={type}/>
         </TabPanel>)
     })
 }
